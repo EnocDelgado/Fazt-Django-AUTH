@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<h1>Create Task</h1>
+
+
+
+<!-- Form sended by view.task -->
+<form action="/create_task/" method="POST">
+
+    <!-- Token -->
+    {% csrf_token %} 
+
+    {{ form.as_p }}
+
+    <button class="btn btn-primary">
+        Save
+    </button>
+</form>
+
+
+
+{% endblock %}
